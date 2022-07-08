@@ -1,0 +1,20 @@
+.HomePage{
+    float: none;
+}
+HorseLight{
+    float: none;
+
+}
+.Light{
+    float: none;
+    /*margin-top: 50px;*/
+    margin: 50px;
+}
+.CardGrid{
+    float: none;
+    margin: 50px;
+}
+.foot{
+    position: relative;
+    left: 35%;
+}

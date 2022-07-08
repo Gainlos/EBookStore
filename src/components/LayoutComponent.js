@@ -1,6 +1,7 @@
 import { Breadcrumb, Layout, Menu } from 'antd';
 import React from 'react';
 import 'antd/dist/antd.min.css';
+import '../css/LayoutComponent.css'
 const { Header, Content, Footer } = Layout;
 
 class LayoutComponent extends React.Component{
@@ -9,56 +10,26 @@ class LayoutComponent extends React.Component{
     }
     render() {
         return(
-            <Layout>
-                <Header
-                    style={{
-                        position: 'fixed',
-                        zIndex: 1,
-                        width: '100%',
-                    }}
-                >
+            <Layout className="layout">
+                <Header>
                     <div className="logo" />
                     <Menu
                         theme="dark"
                         mode="horizontal"
                         defaultSelectedKeys={['2']}
-                        items={new Array(3).fill(null).map((_, index) => ({
-                            key: String(index + 1),
-                            label: `nav ${index + 1}`,
-                        }))}
+                        items={new Array(15).fill(null).map((_, index) => {
+                            const key = index + 1;
+                            return {
+                                key,
+                                label: `nav ${key}`,
+                            };
+                        })}
                     />
                 </Header>
-                <Content
-                    className="site-layout"
-                    style={{
-                        padding: '0 50px',
-                        marginTop: 64,
-                    }}
-                >
-                    <Breadcrumb
-                        style={{
-                            margin: '16px 0',
-                        }}
-                    >
-                        <Breadcrumb.Item>Home</Breadcrumb.Item>
-                        <Breadcrumb.Item>List</Breadcrumb.Item>
-                        <Breadcrumb.Item>App</Breadcrumb.Item>
-                    </Breadcrumb>
-                    <div
-                        className="site-layout-background"
-                        style={{
-                            padding: 24,
-                            minHeight: 380,
-                        }}
-                    >
-                        Content
-                    </div>
+                <Content>
+                    <div className="site-layout-content">Content</div>
                 </Content>
-                <Footer
-                    style={{
-                        textAlign: 'center',
-                    }}
-                >
+                <Footer>
                     Ant Design ©2018 Created by Ant UED
                 </Footer>
             </Layout>

@@ -1,32 +1,37 @@
 import React from 'react';
 import 'antd/dist/antd.min.css';
-import {Carousel} from 'antd';
-const contentStyle = {
-    height: '160px',
-    color: '#fff',
-    lineHeight: '160px',
-    textAlign: 'center',
-    background: '#364d79',
-};
+import {Carousel,Image} from 'antd';
+import HaiBao1 from '../assets/haibao1.jpg';
+import HaiBao2 from '../assets/haibao2.jpg';
+import HaiBao3 from '../assets/haibao3.jpg';
+import HaiBao4 from '../assets/haibao4.jpg';
 class HorseLight extends React.Component{
     constructor(props) {
         super(props);
     }
     render() {
+        const contentStyle = {
+        height: '500px',
+        color: '#fff',
+        lineHeight: '160px',
+        textAlign: 'center',
+        background: '#364d79',
+            width:'1500px'
+    };
         return(
             <Carousel autoplay>
                 <div>
-                    <h3 style={contentStyle}>1</h3>
+                    <Image style={contentStyle} src={HaiBao1} />
                 </div>
                 <div>
-                    <h3 style={contentStyle}>2</h3>
+                    <Image style={contentStyle} src={HaiBao2}  />
                 </div>
                 <div>
-                    <h3 style={contentStyle}>3</h3>
-                </div>
+                <Image style={contentStyle} src={HaiBao3}  />
+            </div>
                 <div>
-                    <h3 style={contentStyle}>4</h3>
-                </div>
+                <Image style={contentStyle} src={HaiBao4} />
+            </div>
             </Carousel>
         );
     }

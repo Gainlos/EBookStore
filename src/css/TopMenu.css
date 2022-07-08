@@ -1,0 +1,16 @@
+.logo{
+    float: left;
+}
+Search{
+    float: left;
+
+}
+.SearchLine{
+    float: left;
+    margin-left: 50px;
+    margin-top: 15px;
+    width: 300px;
+}
+Menu{
+    float: right;
+}
